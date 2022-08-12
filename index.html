@@ -16,6 +16,7 @@
       background-color: hsl(261, 56%, 14%);
       text-align: center;
       justify-content: center;
+      display:flex;
 
     }
     .container
@@ -24,7 +25,7 @@
       flex-direction: row;
       justify-content: center;
       background-color: white;
-      margin:10rem;
+      margin-top:10rem;
       border-radius: .75rem;
       max-width: 900px;
       height: 400px;
@@ -35,14 +36,15 @@
       width: 50%;
       border-bottom-left-radius: .75rem;
       border-top-left-radius: .75rem;
-      padding:1rem 1rem;
       color:  hsla(0, 0%, 100%, 0.75);
       max-height: 400px;
       font-size: 15px;
       font-family: Inter;
       text-align: left;
       padding-top: 2rem;
-      padding-left: 3.5rem;
+      padding-left: 3rem;
+      max-height: 100%;
+     
     }
     h1
     {
@@ -65,7 +67,6 @@
     {
       background: url('images/image-header-desktop.jpg');
       background-repeat: no-repeat;
-
       width:50%;
       height:100%;
       border-top-right-radius: .5rem;
@@ -74,11 +75,14 @@
     .layer 
     {
       background-color: rgba(186, 14, 230, 0.541);
-
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+    }
+    table
+    {
+      padding:.2rem
     }
     .numbers
     {
@@ -97,7 +101,44 @@
 
     @media screen and (max-width: 600px)
     {
-      
+      .container{
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 90%;
+        margin-top:5rem;
+        }
+      .text{
+        padding-top:.25rem;
+        padding-bottom:.25rem;
+        padding-right:.25rem;
+        padding-left:0rem;
+        width: 100%;
+        text-align:left;
+        border-bottom-right-radius: .75rem;
+        border-top-left-radius: 0;
+      }
+      h1{
+       padding:.2rem 0rem .2rem .75rem;
+
+      }
+      p{
+        padding-top: .1rem;
+        padding-right: 0rem;
+        padding-bottom: .2rem;
+        padding-left: .75rem;
+        line-height: 1rem;
+      }
+      .image{
+        width: 100%;
+        height:80%;
+        border-top-left-radius: .75rem;
+        border-bottom-right-radius: 0;
+      }
+      table
+      {
+        padding-left: .75rem;
+        padding-bottom:.25rem
+      }
     }
   </style>
 </head>
@@ -119,8 +160,8 @@
           <td>12m+</td>
         </tr> 
         <tr class="info">
-          <td>COMPANIES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-          <td>TEMPLATES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+          <td>COMPANIES &nbsp;</td>
+          <td>TEMPLATES&nbsp;</td>
           <td>QUERIES&nbsp;</td>
         </tr>
     
