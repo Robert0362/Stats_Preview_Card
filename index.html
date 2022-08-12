@@ -3,31 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body
+    {
+      background-color: hsl(233, 47%, 7%);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+    }
+    .container
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: white;
+      margin:10rem;
+      border-radius: .75rem;
+      max-width: 900px;
+      height: 400px;
+    }
+    .text
+    {
+      background-color: hsl(244, 38%, 16%);
+      width: 50%;
+      border-bottom-left-radius: .75rem;
+      border-top-left-radius: .75rem;
+      padding:1rem 1rem;
+      color:  hsla(0, 0%, 100%, 0.75);
+      max-height: 400px;
+      font-size: 15px;
+      font-family: Inter;
+      text-align: left;
+      padding-top: 2rem;
+      padding-left: 3.5rem;
+    }
+    h1
+    {
+      color: hsl(0, 0%, 100%);
+      padding-right: 2rem;
+    }
+    span
+    {
+      color:hsl(277, 64%, 61%);
+    }
+    p
+    {
+      padding-top: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .image
+    {
+      background: url('images/image-header-desktop.jpg');
+      background-repeat: no-repeat;
+      position: relative;
+      width:50%;
+      height:100%;
+      border-top-right-radius: .5rem;
+      border-bottom-right-radius: .75rem;
+    }
+    .layer 
+    {
+      background-color: rgba(170, 92, 219, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .numbers
+    {
+      font-size: large;
+      font-weight: bolder;
+      color: hsl(0, 0%, 100%);
+    }
+    .info
+    {
+      font-size: smaller;
+    }
+    .attribution 
+    { font-size: 11px; text-align: center; }
+    .attribution a 
+    { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width:400px)
+    {
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="text">
+      <h1>
+        Get <span>insights</span> that help your business grow.
+      </h1>
+      <p>
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.
+      </p>
+      
+      <table>
+        <tr class="numbers">
+          <td>10k+</td>
+          <td>314</td>
+          <td>12m+</td>
+        </tr> 
+        <tr class="info">
+          <td>companies</td>
+          <td>templates</td>
+          <td>queries</td>
+        </tr>
+    
+     
+      </table>
+    </div>
+    <div class="image">
+      <div class="layer">
+      </div>
+    </div>
+      
   </div>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Robert Schwindler</a>.
+  </div> -->
+
+
 </body>
 </html>
